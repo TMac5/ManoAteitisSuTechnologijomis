@@ -27,11 +27,12 @@ nav {
     -webkit-backdrop-filter: blur(10px);
     border-radius: 25px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    height: 4rem;
+    height: max-content;
     transition: box-shadow 0.5s;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0px 0px;
+    align-items: center;
     justify-items: center;
     box-sizing: border-box;
     place-content: center;
@@ -401,12 +402,36 @@ footer p i:hover {
 
 }
 
+@media (max-width: 920px) {
+
+    #navlinks {
+        display: none;
+    }
+
+    #burger {
+        display: flex;
+    }
+
+    #timeBlock {
+        width: 100%;
+        justify-content: end;
+    }
+
+    #navhead h1 {
+        font-size: 28px;
+    }
+
+}
+
 @media (max-width: 768px) {
 
     #navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #navbar h1 {
+        font-size: 24px;
     }
 
     #floatingnav {
@@ -415,7 +440,12 @@ footer p i:hover {
     }
 
     #navhead {
-        width: max-content;
+        width: 100%;
+    }
+
+    #timeBlock {
+        width: 100%;
+        justify-content: end;
     }
 
     #navlinks {
@@ -431,19 +461,129 @@ footer p i:hover {
     }
     
     section p {
-        font-size: 20px;
+        font-size: 24px;
+    }
+
+    #faq h2 {
+        font-size: 24px;
     }
 
     #faq p {
         font-size: 16px;
     }
+
+    .contact-block div i {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        font-size: 16px;
+    }
+
+    .contact-block p {
+        font-size: 16px;
+    }
+
+    .contact-block h2 {
+        font-size: 24px;
+    }
+
+    footer {
+        font-size: 16px;
+        text-align: center;
+        height: max-content;
+    }
+
+}
+
+@media (max-width: 512px) {
+    .contact-block div i {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        font-size: 12px;
+    }
+
+    .contact-block p {
+        font-size: 12px;
+    }
+
+    .contact-block h2 {
+        font-size: 20px;
+    }
     
+    #navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #navhead {
+        width: 100%;
+    }
+
+    #navhead h1 {
+        font-size: 16px;
+        width: min-content;
+    }
+
+    #timeBlock {
+        font-size: 16px;
+        margin: 0;
+        width: 100%;
+        justify-content: end;
+    }
+
+    #burger {
+        margin: 0;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    #faq h2 {
+        font-size: 20px;
+    }
+
+    #faq p {
+        font-size: 12px;
+    }
+
 }
 
 @media (max-width: 320px) {
 
     section h1 {
-        font-size: 48px;
+        font-size: 30px;
+    }
+
+    section p {
+        text-align: center;
+        font-size: 20px;
     }
     
+    #faq p {
+        font-size: 18px;
+    }
+
+    #timeBlock {
+        display: none;
+    }
+
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+
 }
